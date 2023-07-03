@@ -1,0 +1,155 @@
+body {
+    background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.cpuImg {
+    position: relative;
+}
+
+.playerImg {
+    position: relative;
+} 
+
+#triangleImg2 {
+    position: absolute;
+    right: 320px;
+    top: 120px;
+}
+
+#rockImg2 {
+    height: 70px;
+    position: absolute;
+    right: 505px;
+    top: 145px;
+}
+
+#paperImg2 {
+    height: 70px;
+    position: absolute;
+    right: 390px;
+    top: 145px;
+}
+
+#scissorsImg2 {
+    height: 70px;
+    position: absolute;
+    right: 445px;
+    top: 250px;
+}
+
+#triangleImg {
+    position: absolute;
+    left: 320px;
+    top: 120px;
+}
+
+#rockImg {
+    height: 70px;
+    position: absolute;
+    left: 380px;
+    top: 145px;
+}
+
+#rockImg:hover {
+    border: 2px solid yellow;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+#paperImg {
+    height: 70px;
+    position: absolute;
+    left: 500px;
+    top: 145px;
+}
+
+#paperImg:hover {
+    border: 2px solid yellow;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+#scissorsImg {
+    height: 70px;
+    position: absolute;
+    left: 450px;
+    top: 250px;
+}
+
+#scissorsImg:hover {
+    border: 3px solid yellow;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+#player {
+    color: lightblue;
+    font-size: 50px;
+    position: absolute;
+    left: 355px;
+    top: 1px;
+}
+
+#oponent {
+    color: gray;
+    font-size: 50px;
+    position: absolute;
+    right: 330px;
+    top: 1px;
+}
+
+button {
+    position: absolute;
+    bottom: 7%;
+    left: 47%;
+    height: 60px;
+    width: 100px;
+    border-radius: 30%;
+    background-color: bisque;
+}
+
+button:hover {
+    background-color:#002ead;
+    cursor: pointer;
+}
+
+#scoreBoard {
+    position: relative;
+}
+
+#score {
+    color: aliceblue;
+    text-align: center;
+    font-size: 40px;
+}
+
+#cpuScore {
+    color: gray;
+    font-size: 25px;
+    position: absolute;
+    top: 80px;
+    right: 735px;
+}
+
+#playerScore {
+    color: lightblue;
+    font-size: 25px;
+    position: absolute;
+    top: 80px;
+    left: 725px;
+}
+
+#result {
+    color: aliceblue;
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+    top: 200px;
+}

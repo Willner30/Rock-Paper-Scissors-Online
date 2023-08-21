@@ -27,6 +27,13 @@ body {
     top: 145px;
 }
 
+#rockImg2:hover {
+    border: 2px solid yellow;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
+}
+
 #paperImg2 {
     height: 70px;
     position: absolute;
@@ -34,11 +41,25 @@ body {
     top: 145px;
 }
 
+#paperImg2:hover {
+    border: 2px solid yellow;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
+}
+
 #scissorsImg2 {
     height: 70px;
     position: absolute;
     right: 445px;
     top: 250px;
+}
+
+#scissorsImg2:hover {
+    border: 3px solid yellow;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
 }
 
 #triangleImg {
@@ -93,7 +114,7 @@ body {
     color: lightblue;
     font-size: 50px;
     position: absolute;
-    left: 355px;
+    left: 385px;
     top: 1px;
 }
 
@@ -101,7 +122,7 @@ body {
     color: gray;
     font-size: 50px;
     position: absolute;
-    right: 330px;
+    right: 400px;
     top: 1px;
 }
 
@@ -113,11 +134,11 @@ button {
     width: 100px;
     border-radius: 30%;
     background-color: bisque;
+    pointer-events: none;
 }
 
 button:hover {
     background-color:#002ead;
-    cursor: pointer;
 }
 
 #scoreBoard {

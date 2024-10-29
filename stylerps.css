@@ -6,11 +6,11 @@ body {
     background-attachment: fixed;
 }
 
-.cpuImg {
+.player2Img {
     position: relative;
 }
 
-.playerImg {
+.player1Img {
     position: relative;
 } 
 
@@ -151,7 +151,7 @@ button:hover {
     font-size: 40px;
 }
 
-#cpuScore {
+#player2Score {
     color: gray;
     font-size: 25px;
     position: absolute;

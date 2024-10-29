@@ -1,17 +1,17 @@
-const trianglePlayer = document.getElementById("triangleImg");
-const rockPlayer = document.getElementById("rockImg");
-const paperPlayer = document.getElementById("paperImg");
-const scissorsPlayer = document.getElementById("scissorsImg");
-const triangleCPU = document.getElementById("triangleImg2");
-const rockCPU = document.getElementById("rockImg2");
-const paperCPU = document.getElementById("paperImg2");
-const scissorsCPU = document.getElementById("scissorsImg2");
+const trianglePlayer1 = document.getElementById("triangleImg");
+const rockPlayer1 = document.getElementById("rockImg");
+const paperPlayer1 = document.getElementById("paperImg");
+const scissorsPlayer1 = document.getElementById("scissorsImg");
+const trianglePlayer2 = document.getElementById("triangleImg2");
+const rockPlayer2 = document.getElementById("rockImg2");
+const paperPlayer2 = document.getElementById("paperImg2");
+const scissorsPlayer2 = document.getElementById("scissorsImg2");
 const result = document.getElementById("result");
-const cpuScore = document.getElementById("cpuScore");
-const playerScore = document.getElementById("playerScore");
+const player2Score = document.getElementById("cpuScore");
+const player1Score = document.getElementById("playerScore");
 const newGameButton = document.getElementById("restart");
-var currentScorePlayer = 0;
-var currentScoreCPU = 0;
+var currentScorePlayer1 = 0;
+var currentScorePlayer2 = 0;
 
 const defaultPlayer1Move = {
     move: ""
@@ -44,13 +44,13 @@ function requestNickname() {
 socket.on('connectionAccepted', (message) => {
     alert(message);
     if (message === "You are the Player 1!!"){
-        rockCPU.style.pointerEvents = "none";
-        paperCPU.style.pointerEvents = "none";
-        scissorsCPU.style.pointerEvents = "none";
+        rockPlayer2.style.pointerEvents = "none";
+        paperPlayer2.style.pointerEvents = "none";
+        scissorsPlayer2.style.pointerEvents = "none";
     } else if (message === "You are the Player 2!!"){
-        paperPlayer.style.pointerEvents = "none";
-        scissorsPlayer.style.pointerEvents = "none";
-        rockPlayer.style.pointerEvents = "none";
+        paperPlayer1.style.pointerEvents = "none";
+        scissorsPlayer1.style.pointerEvents = "none";
+        rockPlayer1.style.pointerEvents = "none";
     }
 });
 
@@ -77,12 +77,12 @@ function player1ClicksRock () {
 }
 
 function player1PlaysRock () {
-    paperPlayer.style.display = 'none';
-    scissorsPlayer.style.display = 'none';
-    trianglePlayer.style.display = 'none';
-    rockPlayer.style.transform = "scale(2)";
-    rockPlayer.style.transition = "transform 0.75s ease";
-    rockPlayer.style.pointerEvents = 'none';
+    paperPlayer1.style.display = 'none';
+    scissorsPlayer1.style.display = 'none';
+    trianglePlayer1.style.display = 'none';
+    rockPlayer1.style.transform = "scale(2)";
+    rockPlayer1.style.transition = "transform 0.75s ease";
+    rockPlayer1.style.pointerEvents = 'none';
 }
 
 function player1ClicksPaper () {
@@ -91,12 +91,12 @@ function player1ClicksPaper () {
 }
 
 function player1PlaysPaper () {
-    rockPlayer.style.display = 'none';
-    scissorsPlayer.style.display = 'none';
-    trianglePlayer.style.display = 'none';
-    paperPlayer.style.transform = "scale(2)";
-    paperPlayer.style.transition = "transform 0.75s ease";
-    paperPlayer.style.pointerEvents = 'none';
+    rockPlayer1.style.display = 'none';
+    scissorsPlayer1.style.display = 'none';
+    trianglePlayer1.style.display = 'none';
+    paperPlayer1.style.transform = "scale(2)";
+    paperPlayer1.style.transition = "transform 0.75s ease";
+    paperPlayer1.style.pointerEvents = 'none';
 }
 
 function player1ClicksScissors () {
@@ -105,12 +105,12 @@ function player1ClicksScissors () {
 }
 
 function player1PlaysScissors () {
-    paperPlayer.style.display = 'none';
-    rockPlayer.style.display = 'none';
-    trianglePlayer.style.display = 'none';
-    scissorsPlayer.style.transform = "scale(2)";
-    scissorsPlayer.style.transition = "transform 0.75s ease";
-    scissorsPlayer.style.pointerEvents = 'none';
+    paperPlayer1.style.display = 'none';
+    rockPlayer1.style.display = 'none';
+    trianglePlayer1.style.display = 'none';
+    scissorsPlayer1.style.transform = "scale(2)";
+    scissorsPlayer1.style.transition = "transform 0.75s ease";
+    scissorsPlayer1.style.pointerEvents = 'none';
 }
 
 function player2ClicksRock () {
@@ -119,12 +119,12 @@ function player2ClicksRock () {
 }
 
 function player2PlaysRock () {
-    paperCPU.style.display = 'none';
-    scissorsCPU.style.display = 'none';
-    triangleCPU.style.display = 'none';
-    rockCPU.style.transform = "scale(2)";
-    rockCPU.style.transition = "transform 0.75s ease";
-    rockCPU.style.pointerEvents = 'none';
+    paperPlayer2.style.display = 'none';
+    scissorsPlayer2.style.display = 'none';
+    trianglePlayer2.style.display = 'none';
+    rockPlayer2.style.transform = "scale(2)";
+    rockPlayer2.style.transition = "transform 0.75s ease";
+    rockPlayer2.style.pointerEvents = 'none';
 }
 
 function player2ClicksPaper () {
@@ -133,12 +133,12 @@ function player2ClicksPaper () {
 }
 
 function player2PlaysPaper () {
-    rockCPU.style.display = 'none';
-    scissorsCPU.style.display = 'none';
-    triangleCPU.style.display = 'none';
-    paperCPU.style.transform = "scale(2)";
-    paperCPU.style.transition = "transform 0.75s ease";
-    paperCPU.style.pointerEvents = 'none';
+    rockPlayer2.style.display = 'none';
+    scissorsPlayer2.style.display = 'none';
+    trianglePlayer2.style.display = 'none';
+    paperPlayer2.style.transform = "scale(2)";
+    paperPlayer2.style.transition = "transform 0.75s ease";
+    paperPlayer2.style.pointerEvents = 'none';
 }
 
 function player2ClicksScissors () {
@@ -147,12 +147,12 @@ function player2ClicksScissors () {
 }
 
 function player2PlaysScissors () {
-    paperCPU.style.display = 'none';
-    rockCPU.style.display = 'none';
-    triangleCPU.style.display = 'none';
-    scissorsCPU.style.transform = "scale(2)";
-    scissorsCPU.style.transition = "transform 0.75s ease";
-    scissorsCPU.style.pointerEvents = 'none';
+    paperPlayer2.style.display = 'none';
+    rockPlayer2.style.display = 'none';
+    trianglePlayer2.style.display = 'none';
+    scissorsPlayer2.style.transform = "scale(2)";
+    scissorsPlayer2.style.transition = "transform 0.75s ease";
+    scissorsPlayer2.style.pointerEvents = 'none';
 }
 
 function restart () {
@@ -166,32 +166,32 @@ socket.on('restarting', (message) => {
 });
 
 function restartGame () {
-    trianglePlayer.style.display = 'block';
-    rockPlayer.style.display = 'block';
-    rockPlayer.style.transform = "scale(1)";
-    rockPlayer.style.transition = "transform 0.75s ease";
-    rockPlayer.style.pointerEvents = 'auto';
-    paperPlayer.style.display = 'block';
-    paperPlayer.style.transform = "scale(1)";
-    paperPlayer.style.transition = "transform 0.75s ease";
-    paperPlayer.style.pointerEvents = 'auto';
-    scissorsPlayer.style.display = 'block';
-    scissorsPlayer.style.transform = "scale(1)";
-    scissorsPlayer.style.transition = "transform 0.75s ease";
-    scissorsPlayer.style.pointerEvents = 'auto';
-    triangleCPU.style.display = 'block';
-    rockCPU.style.display = 'block';
-    rockCPU.style.transform = "scale(1)";
-    rockCPU.style.transition = "transform 0.75s ease";
-    rockCPU.style.pointerEvents = 'auto';
-    paperCPU.style.display = 'block';
-    paperCPU.style.transform = "scale(1)";
-    paperCPU.style.transition = "transform 0.75s ease";
-    paperCPU.style.pointerEvents = 'auto';
-    scissorsCPU.style.display = 'block';
-    scissorsCPU.style.transform = "scale(1)";
-    scissorsCPU.style.transition = "transform 0.75s ease";
-    scissorsCPU.style.pointerEvents = 'auto';
+    trianglePlayer1.style.display = 'block';
+    rockPlayer1.style.display = 'block';
+    rockPlayer1.style.transform = "scale(1)";
+    rockPlayer1.style.transition = "transform 0.75s ease";
+    rockPlayer1.style.pointerEvents = 'auto';
+    paperPlayer1.style.display = 'block';
+    paperPlayer1.style.transform = "scale(1)";
+    paperPlayer1.style.transition = "transform 0.75s ease";
+    paperPlayer1.style.pointerEvents = 'auto';
+    scissorsPlayer1.style.display = 'block';
+    scissorsPlayer1.style.transform = "scale(1)";
+    scissorsPlayer1.style.transition = "transform 0.75s ease";
+    scissorsPlayer1.style.pointerEvents = 'auto';
+    trianglePlayer2.style.display = 'block';
+    rockPlayer2.style.display = 'block';
+    rockPlayer2.style.transform = "scale(1)";
+    rockPlayer2.style.transition = "transform 0.75s ease";
+    rockPlayer2.style.pointerEvents = 'auto';
+    paperPlayer2.style.display = 'block';
+    paperPlayer2.style.transform = "scale(1)";
+    paperPlayer2.style.transition = "transform 0.75s ease";
+    paperPlayer2.style.pointerEvents = 'auto';
+    scissorsPlayer2.style.display = 'block';
+    scissorsPlayer2.style.transform = "scale(1)";
+    scissorsPlayer2.style.transition = "transform 0.75s ease";
+    scissorsPlayer2.style.pointerEvents = 'auto';
     result.innerHTML = ""; 
     player1Move.move = "";
     player2Move.move = "";
@@ -207,11 +207,11 @@ function drawMessage () {
 }
 
 function win1Message () {
-    console.log(currentScorePlayer);
+    console.log(currentScorePlayer1);
     result.style.transition = "transform 0.75s ease";
     result.innerHTML = "Player 1 wins!!"; 
-    currentScorePlayer++;
-    playerScore.innerHTML = currentScorePlayer; 
+    currentScorePlayer1++;
+    player1Score.innerHTML = currentScorePlayer1; 
     newGameButton.style.pointerEvents = 'auto';
 
 }
@@ -219,8 +219,8 @@ function win1Message () {
 function win2Message () {
     result.style.transition = "transform 0.75s ease";
     result.innerHTML = "Player 2 wins!!"; 
-    currentScoreCPU++;
-    cpuScore.innerHTML = currentScoreCPU; 
+    currentScorePlayer2++;
+    player2Score.innerHTML = currentScorePlayer2; 
     newGameButton.style.pointerEvents = 'auto';
 
 }
